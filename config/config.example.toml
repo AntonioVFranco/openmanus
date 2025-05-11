@@ -1,0 +1,74 @@
+# Global LLM configuration
+[llm]
+# Provider to use by default ("openai", "anthropic", "google", "mistral", "azure", "ollama")
+provider = "openai"
+model = "gpt-4o"
+base_url = "https://api.openai.com/v1"
+api_key = "sk-..."
+max_tokens = 4096
+temperature = 0.0
+
+# OpenAI specific configuration (optional)
+[openai]
+model = "gpt-4o"
+base_url = "https://api.openai.com/v1"
+api_key = "sk-..."
+api_type = "openai"
+
+# Azure OpenAI configuration (optional)
+[azure]
+api_type = "azure"
+model = "gpt-4o" 
+base_url = "https://YOUR_RESOURCE_NAME.openai.azure.com/openai/deployments/YOUR_DEPLOYMENT_ID"
+api_key = "YOUR_API_KEY"
+api_version = "2024-02-01"
+
+# Anthropic Claude configuration (optional)
+[anthropic]
+model = "claude-3-5-sonnet"
+base_url = "https://api.anthropic.com"
+api_key = "sk-ant-..."
+api_type = "anthropic"
+
+# Google Gemini configuration (optional)
+[google]
+model = "gemini-pro"
+base_url = "https://generativelanguage.googleapis.com/v1"
+api_key = "YOUR_API_KEY"
+api_type = "google"
+
+# Mistral AI configuration (optional)
+[mistral]
+model = "mistral-large-latest"
+base_url = "https://api.mistral.ai/v1"
+api_key = "YOUR_API_KEY"
+api_type = "mistral"
+
+# Ollama configuration (optional)
+[ollama]
+model = "llama3.2:1b"
+base_url = "http://localhost:11434"
+api_key = ""  # Ollama typically doesn't need an API key for local instances
+api_type = "ollama"
+
+# Optional configuration for browser usage
+# [browser]
+# Whether to run browser in headless mode (default: false)
+# headless = true
+# Disable browser security features (default: true)
+# disable_security = true
+# Extra arguments to pass to the browser
+# extra_chromium_args = []
+# Path to a Chrome instance to use to connect to your normal browser
+# e.g. '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+# chrome_instance_path = ""
+# Connect to a browser instance via WebSocket
+# wss_url = ""
+# Connect to a browser instance via CDP
+# cdp_url = ""
+
+# Optional configuration, Proxy settings for the browser
+# [browser.proxy]
+# server = "http://proxy-server:port"
+# username = "proxy-username"
+# password = "proxy-password"
